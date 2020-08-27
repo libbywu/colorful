@@ -51,9 +51,31 @@ $(document).ready(function(){
   //hamburger_menu 
   $('.responsive').on('click', function(e) {
     $('.hamburger_menu').addClass("animate");
-    $('.nav-menu').slideToggle();
+    $('.nav-menu').slideDown();
   });
 
+
+
+  //tenyear and googleats pages
+
+  $('.topscroll a').click(function (event) {
+    event.preventDefault();
+    $('html,body').animate({
+        scrollTop: 0
+    }, 1000);
+  });
+    //googleats
+    $("#button1").click(function () {
+      $(".gaimg-1").toggle("slow");
+  });
+
+  $("#button2").click(function () {
+      $(".gaimg-2").toggle("slow");
+  });
+
+  $("#button3").click(function () {
+      $(".gaimg-3").toggle("slow");
+  });
 
 
 

@@ -238,14 +238,6 @@ nav {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 70% 100%, 0 80%);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 70% 100%, 0 80%);
 }
-/* .clip-bn .circle {
-  top:20%;
-  left:20%;
-    width:30%;
-    height:30%;
-    background-color:rgba(255, 255, 255, 0.35);
-    border-radius:50%;
-} */
 
 .bg-libby{
     background-image: url(../images/logo-libby.svg);
@@ -343,7 +335,6 @@ nav {
     margin:0 auto;
     width:85%;
     padding-bottom:1rem;
-    /* box-shadow: 2px 12px 10px 5px rgba(0, 0, 0, .2); */
 }
 .tools:hover {
     background-color: #ffffff;
@@ -539,7 +530,6 @@ footer{
   z-index: 200;
 }
 
-
 .img-works {
   padding-top: 1%;
   padding-left: 1%; 
@@ -605,8 +595,8 @@ footer{
   line-height: 1.8;
 }
 .detail ul li {
-  list-style-type: disc;
-  text-indent:1.5rem;
+    list-style-type: disc;
+    margin-left: 1rem;
 }
 /*google analytics page end*/
 
