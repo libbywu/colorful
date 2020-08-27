@@ -38,8 +38,10 @@ $(document).ready(function(){
   //NAV SHOW - HIDE
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll > 200 ) {
+    if (scroll > 200 && $(window).width() > 768) {
       $("#main-nav").slideDown(700);
+    } else if ( $(window).width() < 769){
+      $("#main-nav").show();
     } else {
       $("#main-nav").slideUp(700);
     }

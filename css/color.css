@@ -88,13 +88,13 @@ nav {
   
 
   
-  nav ul li {
+  nav#main-nav ul li {
     float: left;
     height: 60px;
     padding: 21px 25px;
   }
   
-  nav ul li a {
+  nav#main-nav ul li a {
     padding: 2px 0 0 0;
     position: relative;
     display: block;
@@ -109,11 +109,11 @@ nav {
     -webkit-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
   }
-  nav ul li a:link {
+  nav#main-nav ul li a:link {
     text-decoration:none;
     outline:none;
   }
-  nav ul li a:hover, nav ul li a:active , nav ul li a.active{
+  nav#main-nav ul li a:hover, nav#main-nav ul li a:active , nav#main-nav ul li a.active{
     color: #6e4c41;
     padding: 0 0 0 0;
   }
@@ -214,7 +214,7 @@ nav {
       width:100%;
     }
 
-    nav ul li {
+    nav#main-nav ul li {
       float: none;
       width:100%;
       text-align: center;
@@ -223,28 +223,29 @@ nav {
       background-color: #fff;
       padding: 10px 0;
     }
+    /* #header {
+      padding-top:60px;
+    } */
 }
 
 
 /**/
 .clip-bn {
-    width: 100%;
+    position: relative;
     background-image: url(../images/libby-japan-1.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 100%;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 70% 100%, 0 80%);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 70% 100%, 0 80%);
-    height:100vh;
 }
-.clip-bn .circle {
+/* .clip-bn .circle {
   top:20%;
   left:20%;
     width:30%;
     height:30%;
     background-color:rgba(255, 255, 255, 0.35);
     border-radius:50%;
-}
+} */
 
 .bg-libby{
     background-image: url(../images/logo-libby.svg);
@@ -252,14 +253,10 @@ nav {
     background-position: bottom right;
     background-repeat: no-repeat;
 }
-.mapleLeaf {
-    position:fixed;
-    transform: translateY(-70px);
-}
 .bannerTitle {
-    position: relative;
-    top: 30%;
+    position: absolute;
     left: 12%;
+    padding-top:100px;
     display: inline-table;
     color: #fff;
     z-index:99;
@@ -282,12 +279,23 @@ nav {
   margin-bottom: .5rem;
   font-weight: 500;
 }
-
+@media (min-width:1271px) {
+  .clip-bn {
+    height:1000px;
+  }
+  .mapleLeaf {
+    position: fixed;
+    top:0;
+    height: 1000px;
+  }
+}
 @media (max-width:1270px) {
   .clip-bn {
+      background-position: center;
+      background-size: cover;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
-      height:40vh;
+      height:400px;
   }
   .mapleLeaf {
     display:none;
@@ -295,7 +303,7 @@ nav {
 }
 @media (max-width:460px) {
   .clip-bn {
-    height:30vh;
+    height:280px;
   }
 }
 .mephoto {
@@ -528,6 +536,7 @@ footer{
   position: fixed;
   bottom: 5px;
   right: 5px; 
+  z-index: 200;
 }
 
 
