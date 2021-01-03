@@ -15,6 +15,18 @@ $(document).ready(function(){
       $('.nav-menu').toggleClass("open");
       slideMenu();
     });
+
+        //NAV SHOW - HIDE
+        $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+          if (scroll > 200 && $(window).width() > 768) {
+            $("#main-nav").slideDown(700);
+          } else if ( $(window).width() < 769){
+            $("#main-nav").show();
+          } else {
+            $("#main-nav").slideUp(700);
+          }
+        });
   
     //list
     $('a[href^="#"]').on('click', function(e) {
@@ -37,26 +49,9 @@ $(document).ready(function(){
         'scrollTop': target.offset().top - 60
       }, 500, 'swing', function() {
         window.location.hash = target.selector;
-        $(document).on("scroll", onScroll);
       });
 
     });
-
-
-
-    //NAV SHOW - HIDE
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      if (scroll > 200 && $(window).width() > 768) {
-        $("#main-nav").slideDown(700);
-      } else if ( $(window).width() < 769){
-        $("#main-nav").show();
-      } else {
-        $("#main-nav").slideUp(700);
-      }
-    });
-
-
 
 
     //tenyear and googleats pages

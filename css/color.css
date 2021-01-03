@@ -605,13 +605,7 @@ footer{
     margin-left: 1rem;
 }
 /*google analytics page end*/
-
-@media (max-width:768px) {
-  .tackle{
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-  }
-
+@media (max-width:1224px) {
   .other{
     padding-top:3rem;
     padding-bottom:3rem;
@@ -619,6 +613,14 @@ footer{
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 100%, 25% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 25% 100%, 0 100%);
   }
+}
+
+@media (max-width:768px) {
+  .tackle{
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+
   .bg-libby{
     background-image: none;
     height: auto;
